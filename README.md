@@ -44,7 +44,9 @@ Maintenant regardons comment extraire la data.
 Nous allons utiliser les librairies suivantes:
 
 -Selenium: Selenium est utilisé pour automatiser les activités du navigateur.
+
 -BeautifulSoup: BeautifulSoup est un package pour trier les documents HTML et XML. Il crée des arbres de tri utile pour extraire la data facilement.
+
 -Pandas: Pandas est une librarie utilisée pour manipuler la data et l'analyser. Aussi utilisé pour extraire la data et la stocker dans le format désiré.
 
 ## Les exercices
