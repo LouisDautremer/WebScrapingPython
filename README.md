@@ -89,8 +89,10 @@ Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver d
 
 Step 5: Stockez la data au format requis
 Apres avoir extrait la data, nous devons la stockez. Le format varie selon les envies, par exemple le format CSV (Comma separated value). Pour cela rajoutons le nécessaire dans notre code.
+
 `df = pd.DataFrame({'Product Name':products,'Price':prices,'Rating':ratings})`
 `df.to_csv('scraping.csv', index=False, encoding='utf-8')`
+
 Maintenant en relancant le code, un fichier "scraping.csv" va se créer et le fichier va contenir nos datas.
 
 ----------------------------
