@@ -62,16 +62,39 @@ La data est habituellement imbriquée dans des tags. Pour inspecter la page, jus
 
 Step 3: Trouvez la data que vous voulez extraire / Ecrire le code
 Premièrement, créons un fichier python.
-Importons les librairies nécessaire:
 
-`from selenium import webdriver
-from BeautifulSoup import BeautifulSoup
-import pandas as pd`
+Importons les librairies nécessaire:
+`from selenium import webdriver`
+`from BeautifulSoup import BeautifulSoup`
+`import pandas as pd`
+
+Pour configurer le webdriver pour utiliser Chrome, vous devez set le chemin vers chromedriver
+`driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")`
+
+Pour ouvrir l'URL:
+`products=[] # Liste pour le nom des produits`
+`prices=[] # Liste pour le prix des produits`
+`ratings=[] # Liste pour la notation des produits`
+`driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/")`
+
+Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver depuis le site les <div> tags.
+-> Se referer à la doc des libs pour l'extraction.
+ 
+ Step 4: Lancez le code et extraire la data
+`python "nom".py`
+
+Step 5: Stockez la data au format requis
+Apres avoir extrait la data, nous devons la stockez. Le format varie selon les envies, par exemple le format CSV (Comma separated value). Pour cela rajoutons le nécessaire dans notre code.
+`df = pd.DataFrame({'Product Name':products,'Price':prices,'Rating':ratings})`
+`df.to_csv('scraping.csv', index=False, encoding='utf-8')`
+Maintenant en relancant le code, un fichier "scraping.csv" va se créer et le fichier va contenir nos datas.
 
 ----------------------------
 ### Exercice 2 :
 
-----------------------------
-### Exercice 3 :
+Pour le deuxième exercice, reprenons notre fichier remplis de data.
+Créons à notre programme python contenant le scraping d'un autre site conquerant comme https://www.materiel.net/pc-portable/l409/ afin de comparer nos données collectés.
+
+Maintenant avec notre base de données, essayez d'en faire des comparatifs.
 
 ----------------------------
