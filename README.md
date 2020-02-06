@@ -67,9 +67,11 @@ Step 3: Trouvez la data que vous voulez extraire / Ecrire le code
 Premièrement, créons un fichier python.
 
 Importons les librairies nécessaire:
-`from selenium import webdriver`
-`from BeautifulSoup import BeautifulSoup`
-`import pandas as pd`
+<code>
+from selenium import webdriver
+from BeautifulSoup import BeautifulSoup
+import pandas as pd
+</code>
 
 Pour configurer le webdriver pour utiliser Chrome, vous devez set le chemin vers chromedriver
 `driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")`
