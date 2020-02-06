@@ -53,6 +53,21 @@ Au fur et à mesure des exercices vous allez évoluer dans le scraping Python.
 ----------------------------
 ### Exercice 1 : 
 
+Step 1: Trouvez l'URL que vous voulez scraper
+Pour cet exercice, vous allez scrape LDLC pour extraire le prix, le modèle et la note du produit.
+Voici l'URL : https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/
+
+Step 2: Inspectez la page
+La data est habituellement imbriquée dans des tags. Pour inspecter la page, juste clique droit sur l'élément et cliquez sur "Inspect".
+
+Step 3: Trouvez la data que vous voulez extraire / Ecrire le code
+Premièrement, créons un fichier python.
+Importons les librairies nécessaire:
+
+`from selenium import webdriver
+from BeautifulSoup import BeautifulSoup
+import pandas as pd`
+
 ----------------------------
 ### Exercice 2 :
 
