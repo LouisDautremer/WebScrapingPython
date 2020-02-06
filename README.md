@@ -5,6 +5,7 @@ Le but de ce workshop est de vous apprendre comment utiliser le scraping en Pyth
 ## Pourquoi le scraping
 
 Le web scraping est utilisé pour collecter des informations depuis des sites internets.
+
 Mais pourquoi collecter ces données ?
 Regardons plusieurs utilisation du scraping :
  - Comparaison de prix
@@ -78,6 +79,7 @@ Pour ouvrir l'URL:
 `driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/")`
 
 Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver depuis le site les <div> tags.
+ 
 -> Se referer à la doc des libs pour l'extraction.
  
  Step 4: Lancez le code et extraire la data
