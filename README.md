@@ -83,7 +83,7 @@ products=[] # Liste pour le nom des produits
 prices=[] # Liste pour le prix des produits
 ratings=[] # Liste pour la notation des produits
 </code></pre>
-`driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/">https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/</a>`
+`driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/">https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/</a>")`
 
 Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver depuis le site les <div> tags.
 
