@@ -74,13 +74,16 @@ import pandas as pd
 </code></pre>
 
 Pour configurer le webdriver pour utiliser Chrome, vous devez set le chemin vers chromedriver
+
 `driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")`
 
 Pour ouvrir l'URL:
-`products=[] # Liste pour le nom des produits`
-`prices=[] # Liste pour le prix des produits`
-`ratings=[] # Liste pour la notation des produits`
-`driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/")`
+<pre><code>
+products=[] # Liste pour le nom des produits
+prices=[] # Liste pour le prix des produits
+ratings=[] # Liste pour la notation des produits
+driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/")
+</code></pre>
 
 Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver depuis le site les <div> tags.
 
@@ -92,8 +95,10 @@ Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver d
 Step 5: Stockez la data au format requis
 Apres avoir extrait la data, nous devons la stockez. Le format varie selon les envies, par exemple le format CSV (Comma separated value). Pour cela rajoutons le nécessaire dans notre code.
 
-`df = pd.DataFrame({'Product Name':products,'Price':prices,'Rating':ratings})`
-`df.to_csv('scraping.csv', index=False, encoding='utf-8')`
+<pre><code>
+df = pd.DataFrame({'Product Name':products,'Price':prices,'Rating':ratings})
+df.to_csv('scraping.csv', index=False, encoding='utf-8')
+</code></pre>
 
 Maintenant en relancant le code, un fichier "scraping.csv" va se créer et le fichier va contenir nos datas.
 
