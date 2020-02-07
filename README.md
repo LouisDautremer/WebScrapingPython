@@ -64,6 +64,7 @@ Step 2: Inspectez la page
 La data est habituellement imbriquée dans des tags. Pour inspecter la page, juste clique droit sur l'élément et cliquez sur "Inspect".
 
 Step 3: Trouvez la data que vous voulez extraire / Ecrire le code
+
 Premièrement, créons un fichier python.
 
 Importons les librairies nécessaire:
