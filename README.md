@@ -119,7 +119,7 @@ Maintenant en relancant le code, un fichier "scraping.csv" va se créer et le fi
 ### Exercice 2 :
 
 Pour le deuxième exercice, reprenons notre fichier remplis de data.
-Créons à notre programme python contenant le scraping d'un autre site conquerant comme https://www.materiel.net/pc-portable/l409/ afin de comparer nos données collectés.
+Créons un notre programme python contenant le scraping d'un autre site concurrent comme https://www.materiel.net/pc-portable/l409/ afin de comparer nos données collectés.
 
 Maintenant avec notre base de données, essayez d'en faire des comparatifs.
 
