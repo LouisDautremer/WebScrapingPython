@@ -89,6 +89,18 @@ ratings=[] # Liste pour la notation des produits
 Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver depuis le site les <div> tags.
 
 -> Se referer à la doc des libs pour l'extraction.
+
+<pre><code>
+content = driver.page_source
+soup = BeautifulSoup(content)
+for a in soup.findAll('a',href=True, attrs={'class':'nom_class'}):
+name=a.find('div', attrs={'class':'nom_class'})
+price=a.find('div', attrs={'class':'nom_class'})
+rating=a.find('div', attrs={'class':'nom_class'})
+products.append(name.text)
+prices.append(price.text)
+ratings.append(rating.text) 
+</code></pre>
  
  Step 4: Lancez le code et extraire la data
 `python "nom".py`
