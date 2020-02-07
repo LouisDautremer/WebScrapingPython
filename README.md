@@ -69,37 +69,34 @@ Premièrement, créons un fichier python.
 Importons les librairies nécessaire:
 <pre><code>
 from selenium import webdriver
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 import pandas as pd
 </code></pre>
 
 Pour configurer le webdriver pour utiliser Chrome, vous devez set le chemin vers chromedriver
 
-`driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")`
+`driver = webdriver.Chrome("/usr/lib/chromedriver")`
 
 Pour ouvrir l'URL:
 <pre><code>
 products=[] # Liste pour le nom des produits
 prices=[] # Liste pour le prix des produits
 ratings=[] # Liste pour la notation des produits
+driver.get("https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/")
+content = driver.page_source
+soup = BeautifulSoup(content)
 </code></pre>
-
-`driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/">https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/</a>")` 
 
 Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver depuis le site les <div> tags.
 
 -> Se referer à la doc des libs pour l'extraction.
 
+Exemple pour récuperer les prix:
+
 <pre><code>
-content = driver.page_source
-soup = BeautifulSoup(content)
-for a in soup.findAll('a',href=True, attrs={'class':'nom_class'}):
-name=a.find('div', attrs={'class':'nom_class'})
-price=a.find('div', attrs={'class':'nom_class'})
-rating=a.find('div', attrs={'class':'nom_class'})
-products.append(name.text)
-prices.append(price.text)
-ratings.append(rating.text) 
+for a in soup.findAll('type_balise', class_='class_name'):
+    price = a.find('type_balise', class_='class_name').text
+    prices.append(price)
 </code></pre>
  
  Step 4: Lancez le code et extraire la data
