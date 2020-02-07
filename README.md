@@ -78,12 +78,12 @@ Pour configurer le webdriver pour utiliser Chrome, vous devez set le chemin vers
 `driver = webdriver.Chrome("/usr/lib/chromium-browser/chromedriver")`
 
 Pour ouvrir l'URL:
-****
+<pre><code>
 products=[] # Liste pour le nom des produits
 prices=[] # Liste pour le prix des produits
 ratings=[] # Liste pour la notation des produits
 driver.get("<a href="https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/">https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/</a>")
-****
+</code></pre>
 
 Maintenant il est temps d'extraire la data depuis le site. Nous devons trouver depuis le site les <div> tags.
 
