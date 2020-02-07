@@ -79,10 +79,12 @@ Pour configurer le webdriver pour utiliser Chrome, vous devez set le chemin vers
 
 Pour ouvrir l'URL:
 <pre><code>
-products=[] # Liste pour le nom des produits
 prices=[] # Liste pour le prix des produits
-ratings=[] # Liste pour la notation des produits
 driver.get("https://www.ldlc.com/informatique/ordinateur-portable/pc-portable/c4265/")
+</code></pre>
+
+Pour simplifier le html on utilise la librarie BeautifulSoup:
+<pre><code>
 content = driver.page_source
 soup = BeautifulSoup(content)
 </code></pre>
@@ -106,7 +108,7 @@ Step 5: Stockez la data au format requis
 Apres avoir extrait la data, nous devons la stockez. Le format varie selon les envies, par exemple le format CSV (Comma separated value). Pour cela rajoutons le nécessaire dans notre code.
 
 <pre><code>
-df = pd.DataFrame({'Product Name':products,'Price':prices,'Rating':ratings})
+df = pd.DataFrame({'Price':prices})
 df.to_csv('scraping.csv', index=False, encoding='utf-8')
 </code></pre>
 
