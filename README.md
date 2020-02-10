@@ -118,6 +118,12 @@ Maintenant en relancant le code, un fichier "scraping.csv" va se créer et le fi
 ----------------------------
 ### Exercice 2 :
 
+Maintenant reprenons notre fichier python et esseyons d'y ajouter un peu de contenu.
+A vous de rajouter le nom des produits et leurs descriptions.
+
+----------------------------
+### Exercice 3 :
+
 Pour le deuxième exercice, reprenons notre fichier remplis de data.
 Créons un notre programme python contenant le scraping d'un autre site concurrent comme https://www.materiel.net/pc-portable/l409/ afin de comparer nos données collectés.
 
