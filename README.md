@@ -119,7 +119,7 @@ Maintenant en relancant le code, un fichier "scraping.csv" va se créer et le fi
 ### Exercice 2 :
 
 Maintenant reprenons notre fichier python et esseyons d'y ajouter un peu de contenu.
-A vous de rajouter le nom des produits et leurs descriptions.
+A vous de rajouter le nom des produits et leurs descriptions / informations.
 
 ----------------------------
 ### Exercice 3 :
