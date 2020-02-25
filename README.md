@@ -106,7 +106,7 @@ for a in soup.findAll('type_balise', class_='class_name'):
 `python "nom".py`
 
 Step 5: Stockez la data au format requis
-Apres avoir extrait la data, nous devons la stockez. Le format varie selon les envies, par exemple le format CSV (Comma separated value). Pour cela rajoutons le nécessaire dans notre code.
+Apres avoir extrait la data, nous devons la stockez. Le format varie selon les envies, par exemple le format CSV (Comma separated value). Pour cela rajoutons le nécessaire dans notre code (vous pouvez check la doc de pandas si vous voulez plus de précision sur ces fonctions).
 
 <pre><code>
 df = pandas.DataFrame({'Price':prices})
