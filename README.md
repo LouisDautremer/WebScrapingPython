@@ -71,7 +71,7 @@ Importons les librairies nécessaire:
 <pre><code>
 from selenium import webdriver
 from bs4 import BeautifulSoup
-import pandas as pd
+import pandas
 </code></pre>
 
 Pour configurer le webdriver pour utiliser Chrome, vous devez set le chemin vers chromedriver
@@ -109,7 +109,7 @@ Step 5: Stockez la data au format requis
 Apres avoir extrait la data, nous devons la stockez. Le format varie selon les envies, par exemple le format CSV (Comma separated value). Pour cela rajoutons le nécessaire dans notre code.
 
 <pre><code>
-df = pd.DataFrame({'Price':prices})
+df = pandas.DataFrame({'Price':prices})
 df.to_csv('scraping.csv', index=False, encoding='utf-8')
 </code></pre>
 
